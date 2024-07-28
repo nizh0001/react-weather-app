@@ -32,6 +32,7 @@ function SearchBar({ addLocation, setErrorMessage }) {
         };
         console.log(locationData);
         addLocation(locationData);
+        setInputValue("");
       })
       .catch((err) => {
         console.log(err);
@@ -42,8 +43,16 @@ function SearchBar({ addLocation, setErrorMessage }) {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="location">City, Province, Country </label>
-      <input onChange={handleInput} type="text" name="location" id="location" />
-      <button type="submit">Find Location</button>
+      <input
+        onChange={handleInput}
+        type="text"
+        name="location"
+        id="location"
+        value={inputValue}
+      />
+      <button className="searchButton" type="submit">
+        Find Location
+      </button>
     </form>
   );
 }

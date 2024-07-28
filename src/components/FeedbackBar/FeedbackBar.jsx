@@ -12,6 +12,6 @@ function FeedbackBar({ errorMessage, setErrorMessage }) {
   }, [errorMessage, setErrorMessage]);
 
   if (!errorMessage) return null;
-  return <p>{errorMessage}</p>;
+  return <p className="errorMessage">{errorMessage}</p>;
 }
 export default FeedbackBar;

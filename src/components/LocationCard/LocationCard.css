@@ -1,0 +1,41 @@
+.locationCard {
+  list-style-type: none;
+  background-color: #fff;
+  border: solid 0.05rem var(--text-color);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.locationCard:hover,
+.locationCard:focus {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.title {
+  color: #1539a7;
+  margin: 0;
+}
+
+.removeButton {
+  background-color: #dfe2eb;
+  color: var(--text-color);
+  padding: 0.25rem 1rem;
+  border: solid 0.07rem var(--text-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Roboto";
+}
+
+.removeButton:hover,
+.removeButton:focus {
+  background-color: #fff;
+}

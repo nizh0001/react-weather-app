@@ -6,10 +6,12 @@ function LocationCard({ location, removeCard, setSelectedLocation }) {
     removeCard();
   }
   return (
-    <li onClick={() => setSelectedLocation(location)}>
-      <h2>{location.name}</h2>
+    <li className="locationCard" onClick={() => setSelectedLocation(location)}>
+      <h2 className="title">{location.name}</h2>
       <p>{location.country}</p>
-      <button onClick={handleClick}>Remove</button>
+      <button className="removeButton" onClick={handleClick}>
+        Remove
+      </button>
     </li>
   );
 }

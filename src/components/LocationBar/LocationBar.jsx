@@ -3,10 +3,10 @@ import "./LocationBar.css";
 
 function LocationBar({ locations, removeLocation, setSelectedLocation }) {
   if (locations.length === 0) {
-    return <p>No locations added</p>;
+    return <p className="message">No locations added</p>;
   }
   return (
-    <ul>
+    <ul className="locationList">
       {locations.map((item) => (
         <LocationCard
           key={item.id}

@@ -40,7 +40,6 @@ function App() {
         return respond.json();
       })
       .then((data) => {
-        console.log("apiCall was made");
         setWeather(data);
       })
       .catch((err) => {

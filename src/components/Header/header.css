@@ -1,0 +1,10 @@
+header {
+  background-color: var(--accent-color-one);
+  color: var(--text-color);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  padding: 1.5rem;
+}
