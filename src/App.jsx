@@ -23,7 +23,7 @@ function App() {
       );
       return;
     }
-    setLocations([newLocation, ...locations]);
+    setLocations([...locations, newLocation]);
   }
 
   function removeLocation(id) {

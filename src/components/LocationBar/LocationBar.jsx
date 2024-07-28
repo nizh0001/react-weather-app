@@ -3,7 +3,7 @@ import "./LocationBar.css";
 
 function LocationBar({ locations, removeLocation, setSelectedLocation }) {
   if (locations.length === 0) {
-    return <p className="message">No locations added</p>;
+    return <p className="messageLocation">No locations added</p>;
   }
   return (
     <ul className="locationList">

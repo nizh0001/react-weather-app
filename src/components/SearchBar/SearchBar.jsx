@@ -49,6 +49,7 @@ function SearchBar({ addLocation, setErrorMessage }) {
         name="location"
         id="location"
         value={inputValue}
+        required
       />
       <button className="searchButton" type="submit">
         Find Location
