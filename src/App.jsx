@@ -61,26 +61,31 @@ function App() {
   console.log(locations);
 
   return (
-    <main>
+    <>
       <Header />
-      <SearchBar addLocation={addLocation} setErrorMessage={setErrorMessage} />
-      <FeedbackBar
-        errorMessage={errorMessage}
-        setErrorMessage={setErrorMessage}
-      />
-      <LocationBar
-        locations={locations}
-        removeLocation={removeLocation}
-        setSelectedLocation={setSelectedLocation}
-      />
-      <Weather
-        weather={weather}
-        isLoading={isLoading}
-        selectedLocation={selectedLocation}
-      >
-        <Loading />
-      </Weather>
-    </main>
+      <main>
+        <SearchBar
+          addLocation={addLocation}
+          setErrorMessage={setErrorMessage}
+        />
+        <FeedbackBar
+          errorMessage={errorMessage}
+          setErrorMessage={setErrorMessage}
+        />
+        <LocationBar
+          locations={locations}
+          removeLocation={removeLocation}
+          setSelectedLocation={setSelectedLocation}
+        />
+        <Weather
+          weather={weather}
+          isLoading={isLoading}
+          selectedLocation={selectedLocation}
+        >
+          <Loading />
+        </Weather>
+      </main>
+    </>
   );
 }
 
