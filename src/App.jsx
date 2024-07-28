@@ -61,7 +61,7 @@ function App() {
   console.log(locations);
 
   return (
-    <>
+    <main>
       <Header />
       <SearchBar addLocation={addLocation} setErrorMessage={setErrorMessage} />
       <FeedbackBar
@@ -80,7 +80,7 @@ function App() {
       >
         <Loading />
       </Weather>
-    </>
+    </main>
   );
 }
 

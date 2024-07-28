@@ -1,9 +1,11 @@
 .loader-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 50vh;
+  padding-top: 3rem;
 }
+
 .loader {
   border: 0.5rem solid #f3f3f3;
   border-top: 0.5rem solid #346edb;
