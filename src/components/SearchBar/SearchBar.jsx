@@ -1,8 +1,12 @@
-import { useState } from "react";
-import "./SearchBar.css";
+import { useState } from 'react';
+import './SearchBar.css';
 
-function SearchBar({ addLocation, setErrorMessage }) {
-  const [inputValue, setInputValue] = useState("");
+function SearchBar({
+  addLocation,
+  setErrorMessage,
+}) {
+  const [inputValue, setInputValue] =
+    useState('');
 
   function handleInput(ev) {
     setInputValue(ev.target.value);
@@ -10,7 +14,8 @@ function SearchBar({ addLocation, setErrorMessage }) {
 
   function handleSubmit(ev) {
     ev.preventDefault();
-    const API_KEY = "da0176596ecf0732e05970957c52e8fe";
+    const API_KEY = import.meta.env
+      .VITE_WEATHER_API_KEY;
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${API_KEY}`;
 
     console.log(URL);
@@ -32,26 +37,33 @@ function SearchBar({ addLocation, setErrorMessage }) {
         };
         console.log(locationData);
         addLocation(locationData);
-        setInputValue("");
+        setInputValue('');
       })
       .catch((err) => {
         console.log(err);
-        setErrorMessage("Failed to fetch location data");
+        setErrorMessage(
+          'Failed to fetch location data'
+        );
       });
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="location">City, Province, Country </label>
+      <label htmlFor='location'>
+        City, Province, Country{' '}
+      </label>
       <input
         onChange={handleInput}
-        type="text"
-        name="location"
-        id="location"
+        type='text'
+        name='location'
+        id='location'
         value={inputValue}
         required
       />
-      <button className="searchButton" type="submit">
+      <button
+        className='searchButton'
+        type='submit'
+      >
         Find Location
       </button>
     </form>
